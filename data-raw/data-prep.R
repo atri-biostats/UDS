@@ -105,9 +105,9 @@ for(df_name in c('investigator_ftldlbd_nacc66',
 }
 
 # Derived data ----
-# knitr::purl('../vignettes/CLARiTI-Derived-Data.Rmd',
-#   'CLARiTI-Derived-Data.R')
+# knitr::purl('../vignettes/UDS-Derived-Data.Rmd',
+#   'UDS-Derived-Data.R')
 # 
-# source('CLARiTI-Derived-Data.R')
+# source('UDS-Derived-Data.R')
 # 
 # usethis::use_data(..., overwrite = TRUE)

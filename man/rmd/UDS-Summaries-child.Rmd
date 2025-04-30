@@ -93,7 +93,7 @@ mylabels = list(
   Age = 'Age (yrs)')
 ```
 
-## All CLARiTI participants
+## All UDS participants
 ```{r results = 'asis', include = TRUE}
 tableby(SEX ~ Age + RACE + HISPANIC + 
     AMYLOID_STATUS + CENTILOIDS +
@@ -103,7 +103,7 @@ tableby(SEX ~ Age + RACE + HISPANIC +
   summary(labelTranslations = mylabels, digits = 1)
 ```
 
-## CLARiTI participants with hippocampal volumes
+## UDS participants with hippocampal volumes
 ```{r results = 'asis', include = TRUE}
 tableby(SEX ~ Age + RACE + HISPANIC + 
     AMYLOID_STATUS + CENTILOIDS +
@@ -113,7 +113,7 @@ tableby(SEX ~ Age + RACE + HISPANIC +
   summary(labelTranslations = mylabels, digits = 1)
 ```
 
-## CLARiTI participants with tau PET
+## UDS participants with tau PET
 ```{r results = 'asis', include = TRUE}
 tableby(SEX ~ Age + RACE + HISPANIC + 
     AMYLOID_STATUS + CENTILOIDS +
@@ -123,7 +123,7 @@ tableby(SEX ~ Age + RACE + HISPANIC +
   summary(labelTranslations = mylabels, digits = 1)
 ```
 
-## CLARiTI participants with amyloid PET
+## UDS participants with amyloid PET
 ```{r results = 'asis', include = TRUE}
 tableby(SEX ~ Age + RACE + HISPANIC + 
     AMYLOID_STATUS + CENTILOIDS +
@@ -135,7 +135,7 @@ tableby(SEX ~ Age + RACE + HISPANIC +
 
 # Summary plots
 
-```{r CLARiTI-spaghetti, fig.cap='Spaghetti of selected outcomes by age and race'}
+```{r UDS-spaghetti, fig.cap='Spaghetti of selected outcomes by age and race'}
 dd %>% 
   select(NACCID, Age, RACE, HIPPOCAMPUS, Tau_PET_ComBat, CENTILOIDS,
     PHC_MEM, PHC_EXF, PHC_LAN) %>%
@@ -149,7 +149,7 @@ ggplot(aes(x=Age, y=value, color=RACE)) +
   ylab('')
 ```
 
-```{r CLARiTI-loess, fig.cap='Linear trends of selected outcomes by age and race'}
+```{r UDS-loess, fig.cap='Linear trends of selected outcomes by age and race'}
 dd %>% 
   select(NACCID, Age, RACE, HIPPOCAMPUS, Tau_PET_ComBat, CENTILOIDS,
     PHC_MEM, PHC_EXF, PHC_LAN) %>%

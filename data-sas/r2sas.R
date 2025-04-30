@@ -3,13 +3,13 @@ library(haven) # includes write_xpt
 # library(foreign) # includes write.foreign
 
 # make dirs ----
-dir.create('CLARiTI-SAS-xpt')
-dir.create('CLARiTI-SAS-csv')
+dir.create('UDS-SAS-xpt')
+dir.create('UDS-SAS-csv')
 
 # wipe any existing xpt files ----
-file.remove(list.files('CLARiTI-SAS-xpt', pattern='.xpt', full.names = TRUE))
-file.remove(list.files('CLARiTI-SAS-csv', pattern='.csv', full.names = TRUE))
-file.remove(list.files('CLARiTI-SAS-csv', pattern='.sas', full.names = TRUE))
+file.remove(list.files('UDS-SAS-xpt', pattern='.xpt', full.names = TRUE))
+file.remove(list.files('UDS-SAS-csv', pattern='.csv', full.names = TRUE))
+file.remove(list.files('UDS-SAS-csv', pattern='.sas', full.names = TRUE))
 
 # load HABS-HD R data ----
 devtools::load_all('../')
@@ -77,9 +77,9 @@ for(ff in rda_names){
   colnames(dd) <- tmp$all_names
   CN <- bind_cols(table = ff, tmp$converted_names) %>%
     bind_rows(CN)
-  write_xpt(dd, file.path('CLARiTI-SAS-xpt', paste0(ff, '.xpt')))
-  write_csv(dd, file.path('CLARiTI-SAS-csv', paste0(ff, '.csv')))
-  # setwd('CLARiTI-SAS-csv')
+  write_xpt(dd, file.path('UDS-SAS-xpt', paste0(ff, '.xpt')))
+  write_csv(dd, file.path('UDS-SAS-csv', paste0(ff, '.csv')))
+  # setwd('UDS-SAS-csv')
   # write.foreign(df=dd, 
   #   datafile = paste0(ff, ".csv"), 
   #   codefile = paste0(ff, ".sas"), 

@@ -2,14 +2,14 @@ library(tidyverse)
 
 dir.create(file.path("..", "R"))
 
-# Add CLARiTI-package.R file ----
+# Add UDS-package.R file ----
 cat("#' @keywords internal",
   "\"_PACKAGE\"\n",
   "## usethis namespace: start",
   "#' @importFrom rmarkdown pdf_document knitr_options_pdf",
   "## usethis namespace: end",
   "NULL",
-  file = file.path('..', 'R', 'CLARiTI-package.R'), sep = '\n')
+  file = file.path('..', 'R', 'UDS-package.R'), sep = '\n')
 
 # function for escaping braces ----
 escape <- function(x){
@@ -24,11 +24,12 @@ rda_files <- list.files("../data", pattern = "\\.rda$", full.names = TRUE,
   recursive = TRUE)
 # Document csv sourced dataset(s) ----
 for(ff in rda_files){
+  load(ff)
   tt <- gsub(' ', '_', gsub("\\.rda$", "", basename(ff)))
   message('Documenting ', tt)
   assign("dd", get(tt))
   cat(paste0("#' ", tt),
-    "#' @description CLARiTI dataset.",
+    "#' @description UDS dataset.",
     "#' @details",
     "#' \\itemize{",
     paste("#'   \\item", colnames(dd)),
@@ -40,7 +41,7 @@ for(ff in rda_files){
     paste("#' @format A data frame with", nrow(dd), "rows and", ncol(dd), "variables."),
     "#' @examples",
     "#' \\dontrun{",
-    "#' browseVignettes('CLARiTI')",
+    "#' browseVignettes('UDS')",
     "#' }",
     "NULL\n", sep = "\n",
     file = file.path("..", "R", "data.R"), append = TRUE)          

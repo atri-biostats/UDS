@@ -8,7 +8,7 @@ always_allow_html: true
 <!-- R package version convention: first two digits are for code; last digit is data release number  -->
 
 ```{r, include = FALSE}
-library(CLARiTI)
+library(UDS)
 library(arsenal)
 library(ggplot2)
 library(tidyverse)
@@ -38,26 +38,26 @@ scale_colour_discrete <-
 scale_fill_discrete <-
     function(...) ggsci::scale_fill_lancet()
 
-pkgFilename <- paste0('CLARiTI_', packageVersion('CLARiTI'), '.tar.gz')
+pkgFilename <- paste0('UDS_', packageVersion('UDS'), '.tar.gz')
 ```
 
-# CLARiTI <a href="https://naccdata.org/nacc-collaborations/clariti"><img src="man/figures/logo.png" align="right" height="138" /></a>
+# UDS <a href="https://naccdata.org/data-collection/forms-documentation/uds-3"><img src="man/figures/logo.png" align="right" height="138" /></a>
 
 ## Overview
 
-`CLARiTI` is an R package containing data and code for the **Consortium for Clarity in ADRD Research Through Imaging (CLARiTI)** [@mormino2025consortium]. `CLARiTI` is a bundle of data, analysis code examples, and html and pdf documentation. Documentation can be found at [https://atri-biostats.github.io/CLARiTI](https://atri-biostats.github.io/CLARiTI)
+`UDS` is an R package containing data and code for the **National Alzheimer’s Coordinating Center (NACC) Uniform Data Set (UDS)** [@beekly2007national]. `UDS` is a bundle of data, analysis code examples, and html and pdf documentation. Documentation derived from this package can be found at [https://atri-biostats.github.io/UDS](https://atri-biostats.github.io/UDS)
 
 ## Installation
 
-To install `CLARiTI`:
+To install `UDS`:
 
 * In R, run ``r paste0("install.packages(\"path/to/", pkgFilename, "\", repos = NULL, type = \"source\")")``
 
-The script to build this R package can be found in [tools](https://github.com/atri-biostats/CLARiTI/tree/main/tools).
+The script to build this R package can be found in [tools](https://github.com/atri-biostats/UDS/tree/main/tools).
 
-The code below demonstrates how to use data in the `CLARiTI` package and `R` [@R] to derive some basic summaries.
+The code below demonstrates how to use data in the `UDS` package and `R` [@R] to derive some basic summaries.
 
-```{r, child='man/rmd/CLARiTI-Summaries-child.Rmd'}
+```{r, child='man/rmd/UDS-Summaries-child.Rmd'}
 ```
 
 ## References

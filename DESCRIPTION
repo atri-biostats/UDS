@@ -1,21 +1,22 @@
-Package: CLARiTI
+Package: UDS
 Type: Package
-Title: CLARiTI Study Package
-Description: CLARiTI is a data package containing full CLARiTI dataset.
+Title: UDS Study Package
+Description: National Alzheimer’s Coordinating Center (NACC) Uniform Data Set (UDS)
 Version: 0.1.0.1
 Authors@R: person("ATRI Biostatistics", email = "biostat_request@atrihub.io",
   role = c("aut", "cre"))
 URL: 
-    https://atri-biostats.github.io/CLARiTI,
-    https://github.com/atri-biostats/CLARiTI
-License: Copyright 2025
+    https:https://naccdata.org/data-collection/forms-documentation/uds-3
+    https://atri-biostats.github.io/UDS,
+    https://github.com/atri-biostats/UDS
+License: https://naccdata.org/data-collection/forms-documentation/uds-3
 Encoding: UTF-8
 LazyData: false
 LazyDataCompression: bzip2
 RoxygenNote: 7.3.2
 Collate:
     'data.R'
-    'CLARiTI-package.R'
+    'UDS-package.R'
     'ComBat.R'
 Imports:
     rmarkdown

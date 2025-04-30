@@ -3,28 +3,28 @@
 
 <!-- R package version convention: first two digits are for code; last digit is data release number  -->
 
-# CLARiTI <a href="https://naccdata.org/nacc-collaborations/clariti"><img src="man/figures/logo.png" align="right" height="138" /></a>
+# UDS <a href="https://naccdata.org/data-collection/forms-documentation/uds-3"><img src="man/figures/logo.png" align="right" height="138" /></a>
 
 ## Overview
 
-`CLARiTI` is an R package containing data and code for the **Consortium
-for Clarity in ADRD Research Through Imaging (CLARiTI)** (Mormino et al.
-2025). `CLARiTI` is a bundle of data, analysis code examples, and html
-and pdf documentation. Documentation can be found at
-<https://atri-biostats.github.io/CLARiTI>
+`UDS` is an R package containing data and code for the **National
+Alzheimer’s Coordinating Center (NACC) Uniform Data Set (UDS)** (Beekly
+et al. 2007). `UDS` is a bundle of data, analysis code examples, and
+html and pdf documentation. Documentation derived from this package can
+be found at <https://atri-biostats.github.io/UDS>
 
 ## Installation
 
-To install `CLARiTI`:
+To install `UDS`:
 
 - In R, run
-  `install.packages("path/to/CLARiTI_0.1.0.1.tar.gz", repos = NULL, type = "source")`
+  `install.packages("path/to/UDS_0.1.0.1.tar.gz", repos = NULL, type = "source")`
 
 The script to build this R package can be found in
-[tools](https://github.com/atri-biostats/CLARiTI/tree/main/tools).
+[tools](https://github.com/atri-biostats/UDS/tree/main/tools).
 
-The code below demonstrates how to use data in the `CLARiTI` package and
-`R` (R Core Team 2024) to derive some basic summaries.
+The code below demonstrates how to use data in the `UDS` package and `R`
+(R Core Team 2024) to derive some basic summaries.
 
 # Organize data
 
@@ -120,7 +120,7 @@ mylabels = list(
   Age = 'Age (yrs)')
 ```
 
-## All CLARiTI participants
+## All UDS participants
 
 ``` r
 tableby(SEX ~ Age + RACE + HISPANIC + 
@@ -187,7 +187,7 @@ tableby(SEX ~ Age + RACE + HISPANIC +
 |    Mean (SD) | 16.4 (7.6) | 15.4 (7.6) | 15.8 (7.6) |  |
 |    Range | 0.0 - 99.0 | 0.0 - 99.0 | 0.0 - 99.0 |  |
 
-## CLARiTI participants with hippocampal volumes
+## UDS participants with hippocampal volumes
 
 ``` r
 tableby(SEX ~ Age + RACE + HISPANIC + 
@@ -253,7 +253,7 @@ tableby(SEX ~ Age + RACE + HISPANIC +
 |    Mean (SD) | 16.9 (5.4) | 16.0 (2.7) | 16.4 (4.1) |  |
 |    Range | 0.0 - 99.0 | 0.0 - 25.0 | 0.0 - 99.0 |  |
 
-## CLARiTI participants with tau PET
+## UDS participants with tau PET
 
 ``` r
 tableby(SEX ~ Age + RACE + HISPANIC + 
@@ -318,7 +318,7 @@ tableby(SEX ~ Age + RACE + HISPANIC +
 |    Mean (SD) | 16.7 (2.5) | 16.0 (2.5) | 16.3 (2.5) |  |
 |    Range | 8.0 - 20.0 | 8.0 - 21.0 | 8.0 - 21.0 |  |
 
-## CLARiTI participants with amyloid PET
+## UDS participants with amyloid PET
 
 ``` r
 tableby(SEX ~ Age + RACE + HISPANIC + 
@@ -401,7 +401,7 @@ ggplot(aes(x=Age, y=value, color=RACE)) +
 
 <div class="figure">
 
-<img src="man/figures/README-CLARiTI-spaghetti-1.png" alt="Spaghetti of selected outcomes by age and race" width="100%" />
+<img src="man/figures/README-UDS-spaghetti-1.png" alt="Spaghetti of selected outcomes by age and race" width="100%" />
 <p class="caption">
 
 Spaghetti of selected outcomes by age and race
@@ -426,7 +426,7 @@ ggplot(aes(x=Age, y=value, color=RACE)) +
 
 <div class="figure">
 
-<img src="man/figures/README-CLARiTI-loess-1.png" alt="Linear trends of selected outcomes by age and race" width="100%" />
+<img src="man/figures/README-UDS-loess-1.png" alt="Linear trends of selected outcomes by age and race" width="100%" />
 <p class="caption">
 
 Linear trends of selected outcomes by age and race
@@ -485,12 +485,12 @@ ggplot(dd %>% filter(!is.na(Tau_PET_ComBat)),
 <div id="refs" class="references csl-bib-body hanging-indent"
 entry-spacing="0">
 
-<div id="ref-mormino2025consortium" class="csl-entry">
+<div id="ref-beekly2007national" class="csl-entry">
 
-Mormino, Elizabeth C, Sarah A Biber, Annalise Rahman-Filipiak,
-Konstantinos Arfanakis, Lindsay Clark, Jeffrey L Dage, John A Detre, et
-al. 2025. “The Consortium for Clarity in ADRD Research Through Imaging
-(CLARiTI).” *Alzheimer’s & Dementia* 21 (1): e14383.
+Beekly, Duane L, Erin M Ramos, William W Lee, Woodrow D Deitrich, Mary E
+Jacka, Joylee Wu, Janene L Hubbard, et al. 2007. “The National
+Alzheimer’s Coordinating Center (NACC) Database: The Uniform Data Set.”
+*Alzheimer Disease & Associated Disorders* 21 (3): 249–58.
 
 </div>
 
