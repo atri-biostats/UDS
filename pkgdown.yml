@@ -1,0 +1,9 @@
+pandoc: '3.6'
+pkgdown: 2.1.1
+pkgdown_sha: ~
+articles:
+  UDS-Summaries: UDS-Summaries.html
+last_built: 2025-05-01T00:09Z
+urls:
+  reference: https://atri-biostats.github.io/UDS/reference
+  article: https://atri-biostats.github.io/UDS/articles
